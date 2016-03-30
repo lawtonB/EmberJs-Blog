@@ -15,5 +15,13 @@ export default Ember.Route.extend({
       var newBlogPost = this.store.createRecord('blog', params);
       newBlogPost.save();
     },
+    update(blog, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key]!==undefined) {
+          blog.set(key,params[key]);
+        }
+      });
+      blog.save();
+    }
   }
 });
