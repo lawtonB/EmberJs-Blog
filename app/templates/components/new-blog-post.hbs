@@ -1,0 +1,30 @@
+{{#if addNewBlogPost}}
+<h1>New Post</h1>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="author">Author</label>
+        {{input value=author id="author"}}
+      </div>
+      <div class="form-group">
+        <label for="title">Title</label>
+        {{input value=title id="title"}}
+      </div>
+      <div class="form-group">
+        <label for="content">Content</label>
+        {{input value=content id="content"}}
+      </div>
+      <div class="form-group">
+        <label for="link">Link</label>
+        {{input value=link id="link"}}
+      </div>
+      <div class="form-group">
+        <label for="date">Date</label>
+        {{input value=date id="date"}}
+      </div>
+      <button {{action 'saveBlogPost'}}>Save Post</button>
+    </form>
+  </div>
+  {{else}}
+    <button {{action 'blogPostForm'}}>Add New Post</button>
+  {{/if}}
