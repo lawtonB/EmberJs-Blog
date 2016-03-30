@@ -1,0 +1,15 @@
+<header>
+  <h1>Blog</h1>
+</header>
+
+<div class="container">
+  {{outlet}}
+</div>
+
+<hr>
+
+<footer>
+  {{#link-to 'index'}}Home{{/link-to}}
+  {{#link-to 'contact'}}Contact{{/link-to}}
+  {{#link-to 'about'}}About{{/link-to}}
+</footer>
