@@ -3,7 +3,7 @@
 <p> this blog is designed to demonstrate basic functionality in Ember.js. </p>
 
 <ul>
-  {{#each model as |blog|}}
+  {{#each model.blogs as |blog|}}
     {{blog-tile blog=blog destroyBlog='destroyBlog' update='update'}}
   {{/each}}
 </ul>
