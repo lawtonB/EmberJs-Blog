@@ -1,9 +1,13 @@
 <h1> Admin Page </h1>
   <ul>
     {{#each model as |blog|}}
-    <p>{{blog.title}}</p>
+    <br>
+    Title: <strong>{{blog.title}}</strong>
+    <br>
+    <br>
     <button class="btn btn-danger" {{action 'delete' blog}}>Delete</button>
     {{update-blog blog=blog update='update'}}
+    <hr>
     {{/each}}
   </ul>
 <br>

@@ -6,13 +6,15 @@
 {{new-comment blog=blog saveComment='saveComment'}}
 
 <ul>
+  <h3>Comments</h3>
+  <hr>
   {{#each blog.comments as |comment|}}
-    <hr>
-    <h3>Comments</h3>
-    {{comment.author}}<br>
+    <strong>{{comment.author}}</strong><br>
     {{comment.content}}<br>
     <br>
     {{update-comment comment=comment update="update"}}
     <button class="btn btn-danger"{{action 'deleteComment' comment}}>Delete</button>
+    <br>
+    <hr>
   {{/each}}
 </ul>
