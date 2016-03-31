@@ -13,6 +13,10 @@ export default Ember.Route.extend({
       newComment.save().then(function(){
       return blog.save();
       });
+    },
+
+    deleteComment(comment){
+      comment.destroyRecord();
     }
   }
 });

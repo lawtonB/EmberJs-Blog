@@ -7,7 +7,8 @@
 
 <ul>
   {{#each blog.comments as |comment|}}
-    {{comment.author}}
-    {{comment.content}}
+    {{comment.author}}<br>
+    {{comment.content}}<br>
+    <button {{action 'deleteComment' comment}}>Delete</button>
   {{/each}}
 </ul>
