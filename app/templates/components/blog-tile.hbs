@@ -1,1 +1,11 @@
-<li>{{#link-to 'blogpost' blog.id}}{{blog.title}}{{/link-to}}</li>
+<div>
+  <div class="col-md-10">
+  {{#link-to 'blogpost' blog.id}}{{blog.title}}{{/link-to}}
+  </div>
+
+  <div class="col-md-2">
+    By: {{blog.author}}
+  </div>
+<hr>
+</div>
+<hr>

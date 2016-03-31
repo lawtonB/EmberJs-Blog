@@ -5,11 +5,13 @@ export default Ember.Component.extend({
     saveComment(params){
       this.sendAction('saveComment', params);
     },
-
     deleteComment(comment) {
       if(confirm('DESTROY???')) {
         this.sendAction('deleteComment', comment);
       }
+    },
+      update(comment, params) {
+        this.sendAction('update', comment, params);
     }
   }
 });
