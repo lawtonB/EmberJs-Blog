@@ -2,3 +2,12 @@
 <p>{{blog.content}}</p>
 <p>{{blog.link}}</p>
 <p>posted by {{blog.author}} on {{blog.date}}</p>
+
+{{new-comment blog=blog saveComment='saveComment'}}
+
+<ul>
+  {{#each blog.comments as |comment|}}
+    {{comment.author}}
+    {{comment.content}}
+  {{/each}}
+</ul>
